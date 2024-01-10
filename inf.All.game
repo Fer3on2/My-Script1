@@ -1,19 +1,8 @@
 local Player = Game.Players.localPlayer
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "☢️ Fer3on Script V1 ☢️", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "☢️ Fer3on Script V1 ☢️", HidePremium = false, IntroText = "Fer3on", SaveConfig = true, ConfigFolder = "Fer3on V1"})
 
---[[
-Name = <string> - The name of the UI.
-HidePremium = <bool> - Whether or not the user details shows Premium status or not.
-SaveConfig = <bool> - Toggles the config saving in the UI.
-ConfigFolder = <string> - The name of the folder where the configs are saved.
-IntroEnabled = <bool> - Whether or not to show the intro animation.
-IntroText = <string> - Text to show in the intro animation.
-IntroIcon = <string> - URL to the image you want to use in the intro animation.
-Icon = <string> - URL to the image you want displayed on the window.
-CloseCallback = <function> - Function to execute when the window is closed.
-]]
 
 local Tab = Window:MakeTab({
 	Name = "🏠| Home",
@@ -75,24 +64,6 @@ Tab:AddTextbox({
 	Default = " ",
 	TextDisappear = true,
 	Callback = function(Value)
-		game.Players.LocalPlayer.character.Humanoid.WalkSpeed = (Value)
+		game.Players.LocalPlayer.character.Humanoid.WalkSpeed = Value
 	end	  
 })
-
---[[
-Name = <string> - The name of the textbox.
-Default = <string> - The default value of the textbox.
-TextDisappear = <bool> - Makes the text disappear in the textbox after losing focus.
-Callback = <function> - The function of the textbox.
-]]
-
-
---[[
-Name = <string> - The name of the slider.
-Min = <number> - The minimal value of the slider.
-Max = <number> - The maxium value of the slider.
-Increment = <number> - How much the slider will change value when dragging.
-Default = <number> - The default value of the slider.
-ValueName = <string> - The text after the value number.
-Callback = <function> - The function of the slider.
-]]
