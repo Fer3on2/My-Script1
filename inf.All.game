@@ -16,8 +16,8 @@ CloseCallback = <function> - Function to execute when the window is closed.
 ]]
 
 local Tab = Window:MakeTab({
-	Name = "〽️| Home",
-	Icon = "rbxassetid://4483345998",
+	Name = "🏠| Home",
+	Icon = "rbxassetid://nil",
 	PremiumOnly = false
 })
 
@@ -50,7 +50,7 @@ Time = <number> - The duration of the notfication.
 ]]
 
 Tab:AddButton({
-	Name = "Infintie Jumping",
+	Name = "Infinte Jumping",
 	Callback = function()
       		loadstring(game:HttpGet("https://raw.githubusercontent.com/BsGlitch/-nfJumps/main/BsGlitch"))();
   	end    
@@ -61,6 +61,7 @@ Name = <string> - The name of the button.
 Callback = <function> - The function of the button.
 ]]
 
+
 Tab:AddButton({
 	Name = "Fly",
 	Callback = function()
@@ -68,7 +69,30 @@ Tab:AddButton({
   	end    
 })
 
+
+Tab:AddTextbox({
+	Name = "WalkSpeed",
+	Default = " ",
+	TextDisappear = true,
+	Callback = function(Value)
+		game.Players.LocalPlayer.character.Humanoid.WalkSpeed = (Value)
+	end	  
+})
+
 --[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
+Name = <string> - The name of the textbox.
+Default = <string> - The default value of the textbox.
+TextDisappear = <bool> - Makes the text disappear in the textbox after losing focus.
+Callback = <function> - The function of the textbox.
+]]
+
+
+--[[
+Name = <string> - The name of the slider.
+Min = <number> - The minimal value of the slider.
+Max = <number> - The maxium value of the slider.
+Increment = <number> - How much the slider will change value when dragging.
+Default = <number> - The default value of the slider.
+ValueName = <string> - The text after the value number.
+Callback = <function> - The function of the slider.
 ]]
