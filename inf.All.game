@@ -1,7 +1,8 @@
 local Player = Game.Players.localPlayer
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "☢️ Fer3on Script V1 ☢️", HidePremium = false, IntroText = "Fer3on", SaveConfig = true, ConfigFolder = "Fer3on V1"})
+local Window = OrionLib:MakeWindow({Name = "☢️ Fer3on [Beta] ☢️", HidePremium = false, IntroText = "Fer3on Script", SaveConfig = true, ConfigFolder = "Fer3on 1"})
+
 
 
 local Tab = Window:MakeTab({
@@ -17,7 +18,7 @@ PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
 ]]
 
 local Section = Tab:AddSection({
-	Name = "For All Maps"
+	Name = "Player Movement"
 })
 
 --[[
